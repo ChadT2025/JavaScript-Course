@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Quantity</title>
+    <style></style>
+  </head>
+  <body>
+    <p>Cart Quantity</p>
+    <button onclick="console.log(`Cart Quantity: ${cartQuantity}`)">
+      Show Quantity
+    </button>
+    <button
+      onclick="
+        if (cartQuantity + 1 > 10) {
+          alert('Maximum Number of items hit');
+        } else {
+          cartQuantity++;
+          console.log(`Cart Quantity: ${cartQuantity}`);
+        }
+      "
+    >
+      Add to Cart
+    </button>
+    <button
+      onclick="
+        if (cartQuantity + 2 > 10) {
+          alert('Maximum Number of items hit');
+        } else {
+          cartQuantity += 2;
+          console.log(`Cart Quantity: ${cartQuantity}`);
+        }
+      "
+    >
+      +2
+    </button>
+    <button
+      onclick="
+        if (cartQuantity + 3 > 10) {
+          alert('Maximum Number of items hit');
+        } else {
+          cartQuantity += 3;
+          console.log(`Cart Quantity: ${cartQuantity}`);
+        }
+      "
+    >
+      +3
+    </button>
+    <button
+      onclick="
+        console.log('Cart was Reset');
+        cartQuantity = 0;
+        console.log(`Cart Quantity: ${cartQuantity}`);
+      "
+    >
+      Reset Cart
+    </button>
+
+    <button
+      onclick="
+        if (cartQuantity + 3 > 10) {
+          alert('Maximum Number of items hit');
+        } else {
+          cartQuantity += 4;
+          console.log(`Cart Quantity: ${cartQuantity}`);
+        }
+      "
+    >
+      +4
+    </button>
+
+    <button
+      onclick="
+        if (cartQuantity + 3 > 10) {
+          alert('Maximum Number of items hit');
+        } else {
+          cartQuantity += 5;
+          console.log(`Cart Quantity: ${cartQuantity}`);
+        }
+      "
+    >
+      +5
+    </button>
+
+    <button
+      onclick="
+        if (cartQuantity - 1 < 0) {
+          alert('Not enough items');
+        } else {
+          cartQuantity--;
+          console.log(`Cart Quantity: ${cartQuantity}`);
+        }
+      "
+    >
+      Remove from cart
+    </button>
+
+    <button
+      onclick="
+        if (cartQuantity - 2 < 0) {
+          alert('Not enough items');
+        } else {
+          cartQuantity -= 2;
+          console.log(`Cart Quantity: ${cartQuantity}`);
+        }
+      "
+    >
+      -2
+    </button>
+
+    <button
+      onclick="
+        if (cartQuantity - 3 < 0) {
+          alert('Not enough items');
+        } else {
+          cartQuantity -= 3;
+          console.log(`Cart Quantity: ${cartQuantity}`);
+        }
+      "
+    >
+      -3
+    </button>
+    <script>
+      let cartQuantity = 0;
+
+      function updateCartQuantity() {}
+    </script>
+  </body>
+</html>

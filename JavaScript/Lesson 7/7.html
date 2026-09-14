@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FUnc</title>
+  </head>
+  <body>
+    <script>
+      function greet(name) {
+        console.log(`Heyyyy ${name}`);
+      }
+
+      greet();
+      greet();
+      greet();
+      greet();
+      greet();
+
+      const fahrenheit = convertToFahrenheit(25, "C");
+      console.log(fahrenheit);
+
+      function convertToFahrenheit(celsuis, unit) {
+        let fahrenheit = "";
+        console.log((celsuis * 9) / 5 + 32 + (unit = "F"));
+        return fahrenheit;
+      }
+
+      let celsuis = converToCelcuis(86, "F");
+
+      function converToCelcuis(fahrenheit, unit) {
+        let celsuis = "";
+        console.log(((fahrenheit - 32) * 5) / 9 + (unit = "C"));
+        return celsuis;
+      }
+
+      function convertTemptrature(temprature, from, too) {
+        if (from === "C" && too === "F") {
+          return (temprature * 9) / 5 + 32 + "F";
+        } else if (from === "F" && too === "C") {
+          return ((temprature - 32) * 5) / 9 + "C";
+        }
+      }
+
+      console.log(convertTemptrature(25, "C", "F"));
+      console.log(convertTemptrature(86, "F", "C"));
+      console.log(convertTemptrature(100, "F", "C"));
+
+      function distanceConverter(length, from, too) {
+        if (from === "Km" && too === "Miles") {
+          return length / 1.6 + "Miles";
+        } else if (from === "Miles" && too === "Km") {
+          return Math.round(length * 1.6) + "Km";
+        } else if (from === "Feet" && too === "Km") {
+          return length / 3281 + " Feet";
+        } else if (from === "Feet" && too === "Miles") {
+          return length / 5280 + "Feet";
+        } else if (from === "Miles" && too === "Feet") {
+          return length * 5280 + "Feet";
+        } else if (from === "Km" && too === "Feet") {
+          return length * 3281 + "Feet";
+        }
+      }
+      console.log(distanceConverter(28, "Miles", "Km"));
+    </script>
+  </body>
+</html>

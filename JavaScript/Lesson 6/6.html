@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const hour = 3;
+      const name = "Chad";
+      if (hour > 6 && hour < 12) {
+        console.log(`Good Morning! ${name}`);
+      } else if (hour > 13 && hour < 17) {
+        console.log(`Good Afternoon! ${name}`);
+      } else {
+        console.log(`Good Night! ${name}`);
+      }
+
+      const age = 67;
+      const isHoliday = !true;
+      if ((age < 6 || age > 65) && isHoliday) {
+        console.log("Wow you qualify for a discount");
+      } else {
+        console.log("You must pay normal price");
+      }
+
+      const randomNumber = Math.random();
+
+      let result = randomNumber;
+
+      if (randomNumber > 0.5) {
+        console.log("Heads");
+        result = "Heads";
+      } else {
+        console.log("Tails");
+        result = "Tails";
+      }
+
+      const guess = "Heads";
+
+      if (result === guess) {
+        console.log("You Win");
+      } else {
+        console.log("You Lose");
+      }
+    </script>
+  </body>
+</html>
