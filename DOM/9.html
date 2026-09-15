@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style></style>
+  <body>
+    <button class="js-button">9a</button>
+    <button class="js-button2">9b</button>
+
+    <button class="js-heads" onclick="headsTails('heads')">heads</button>
+    <button class="js-tails" onclick="headsTails('tails')">tails</button>
+    <p class="js-choice"></p>
+
+    <input
+      type="text"
+      placeholder="name"
+      class="js-name-input"
+      onkeydown="enterKey(event)"
+    />
+    <button onclick="displayName()">Submit</button>
+    <p class="js-result"></p>
+
+    <a href="rps.html" class="html-button">
+      <button>Rps Page</button>
+    </a>
+
+    <script>
+      function rPs() {}
+
+      console.log(document.querySelector(".js-button"));
+      const buttonTwo = document.querySelector(".js-button2");
+      buttonTwo.innerHTML = "9b done!";
+
+      function headsTails(playerChoice) {
+        if (playerChoice === "heads") {
+          document.querySelector(".js-choice").innerHTML = "You chose heads";
+        } else if (playerChoice === "tails") {
+          document.querySelector(".js-choice").innerHTML =
+            `You chose:${playerChoice}`;
+        }
+      }
+
+      function displayName() {
+        const inputName = document.querySelector(".js-name-input");
+        let name = inputName.value;
+        console.log(name);
+        document.querySelector(".js-result").innerHTML =
+          `Your name is: ${name}`;
+      }
+
+      function enterKey(event) {
+        if (event.key === "Enter") {
+          displayName();
+        }
+      }
+
+      const inputName = document.querySelector(".js-name-input");
+      let name = inputName.value;
+    </script>
+  </body>
+</html>

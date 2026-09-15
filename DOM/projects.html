@@ -8,7 +8,41 @@
   <body>
     <p>YouTube Subscribe button</p>
     <button class="js-subscribeButton" onclick="subscribe()">Subscribe</button>
+
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40= +$10 shipping</p>
+    <p>Orders over $40= Free shipping</p>
+    <input
+      placeholder="Cost of order"
+      class="js-input"
+      onkeydown="enterKey(event)"
+    />
+    <button class="js-calculate" onclick="calculateTotal()">Calculate</button>
+    <p class="js-total"></p>
+
+    <button class="js-subscribeButton" onclick="subscribe()">Subscribe</button>
+
+    <input type="text" placeholder="HELLO" class="js-type" />
+    <p class="js-show"></p>
     <script>
+      function enterKey(event) {
+        if (event.key === "Enter") {
+          calculateTotal();
+        }
+      }
+
+      function calculateTotal() {
+        const inputElement = document.querySelector(".js-input");
+        let cost = Number(inputElement.value);
+        console.log(typeof cost);
+
+        if (cost < 40) {
+          cost = (cost * 100 + 10 * 100) / 100;
+        }
+
+        document.querySelector(".js-total").innerHTML = `$${cost}`;
+      }
+
       function subscribe() {
         const buttonElement = document.querySelector(".js-subscribeButton");
 
@@ -17,6 +51,12 @@
         } else {
           buttonElement.innerHTML = "Subscribe";
         }
+      }
+
+      console.log(document.querySelector(".js-type"));
+
+      function typeShow() {
+        console.log(document.querySelector(".js-type"));
       }
     </script>
   </body>
