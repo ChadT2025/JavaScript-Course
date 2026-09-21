@@ -61,17 +61,6 @@ body {
   text-decoration: none;
 }
 
-.nav a:hover {
-  background: rgba(124, 92, 255, 0.15);
-  color: #e7e9f3;
-}
-
-.nav a.active {
-  background: #7c5cff;
-  color: white;
-  font-weight: bold;
-}
-
 .footer {
   display: flex;
   flex-direction: column;

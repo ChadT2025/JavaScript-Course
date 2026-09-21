@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .add-button {
+        background-color: rgb(255, 216, 20);
+        padding-bottom: 5px;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 5px;
+        border: none;
+        border-radius: 50px;
+      }
+
+      .request-button {
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        margin-right: 20px;
+      }
+
+      .later-button {
+        background-color: rgb(230, 230, 230);
+        font-weight: bold;
+        padding: 11px;
+        border: none;
+        border-radius: 5px;
+      }
+
+      .css-buttons {
+        background-color: rgb(230, 230, 230);
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .js-black {
+        background-color: black;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="add-button">Add to Cart</button>
+
+    <p></p>
+
+    <button class="request-button">Request Now</button>
+    <button class="later-button">Schedule for later</button>
+
+    <p></p>
+
+    <button class="js-button">Test</button>
+
+    <p></p>
+
+    <button
+      onclick="
+        changeColor('.js-buttons');
+        oneColor('.js-buttons');
+      "
+      class="js-buttons css-buttons"
+    >
+      Gaming
+    </button>
+
+    <button
+      onclick="
+        changeColor('.js-music');
+        oneColor('.js-music');
+      "
+      class="js-music css-buttons"
+    >
+      Music
+    </button>
+
+    <button
+      onclick="
+        changeColor('.js-tech');
+        oneColor('.js-tech');
+      "
+      class="js-tech css-buttons"
+    >
+      Tech
+    </button>
+
+    <script>
+      const gaming = document.querySelector(".js-buttons");
+      const music = document.querySelector(".js-music");
+      const tech = document.querySelector(".js-tech");
+
+      function changeColor(selector) {
+        const button = document.querySelector(selector);
+
+        if (button.classList.contains("js-black")) {
+          button.classList.remove("js-black");
+        } else {
+          button.classList.add("js-black");
+        }
+      }
+
+      function oneColor(selector) {
+        if (selector === ".js-buttons") {
+          music.classList.remove("js-black");
+          tech.classList.remove("js-black");
+        } else if (selector === ".js-music") {
+          gaming.classList.remove("js-black");
+          tech.classList.remove("js-black");
+        } else if (selector === ".js-tech") {
+          gaming.classList.remove("js-black");
+          music.classList.remove("js-black");
+        }
+      }
+    </script>
+  </body>
+</html>

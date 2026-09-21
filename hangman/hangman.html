@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS Hangman</title>
+    <link rel="stylesheet" href="./hangman.css" />
+    <link rel="stylesheet" href="../Placeholder/style.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">⚡</div>
+        <div>
+          <span class="name">SkillsTrack</span>
+          <span class="role">LEARNER</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#" class="active">Dashboard</a>
+        <a href="#">Progress</a>
+        <a href="#">Tasks</a>
+        <a href="#">Booking</a>
+        <a href="#">Hangman</a>
+      </nav>
+
+      <div class="footer">
+        <strong>Placeholder</strong>
+        <a href="#" class="signout">Sign Out</a>
+      </div>
+    </aside>
+
+    <main class="content">
+      <div class="topbar">
+        <h1 class="page-heading">placeholder</h1>
+        <button class="theme-btn">Theme</button>
+      </div>
+      <div class="page">
+        <p class="current-page-heading">Hangman</p>
+
+        <!-- script.js looks for these 5 ids, so all 5 must exist -->
+        <img
+          id="hangmanImg"
+          class="hangman-img"
+          src="hangman_0.png"
+          alt="Hangman"
+        />
+        <div id="wordDisplay"></div>
+        <div id="message"></div>
+        <div id="keyboard"></div>
+        <button id="resetBtn">Play Again</button>
+      </div>
+    </main>
+    <!-- The script goes LAST, after the elements above.
+         In the <head> it runs too early and can't find them. -->
+    <script src="script.js"></script>
+  </body>
+</html>

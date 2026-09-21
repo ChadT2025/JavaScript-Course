@@ -1,0 +1,51 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  padding-top: 50px;
+  background: #f0f0f0;
+}
+
+#hangmanImg {
+  filter: brightness(0) invert(1);
+}
+
+#wordDisplay {
+  font-size: 32px;
+  letter-spacing: 10px;
+  margin: 20px;
+  font-weight: bold;
+  color: white;
+}
+#message {
+  font-size: 20px;
+  color: white;
+  margin: 20px;
+  height: 30px;
+}
+.letter-btn {
+  background-color: transparent;
+  color: white;
+  padding: 10px 15px;
+  margin: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  border-color: solid;
+  border-color: white;
+  border-width: 2px;
+  border-radius: 20px;
+}
+.letter-btn:disabled {
+  background: transparent;
+  cursor: pointer;
+  color: white;
+  border-color: solid;
+  border-color: white;
+  border-width: 2px;
+  border-radius: 20px;
+}
+#resetBtn {
+  padding: 10px 20px;
+  font-size: 18px;
+  margin-top: 20px;
+  display: none;
+}

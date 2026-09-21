@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity</title>
+  </head>
+  <body>
+    <script>
+      /*
+      const numbers = [10, 20, 30];
+      numbers.push(99);
+      console.log(numbers);
+
+      function getLastValue(array) {
+        const i = array.length - 1;
+        return array[i];
+      }
+      console.log(getLastValue([1, 20, 22, 24, 5]));
+      console.log(getLastValue(["hi", "hello", "good"]));
+
+      const count = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      for (let i = 10; i > 0; i--) {
+        console.log(i);
+      }
+      
+      let i = 0;
+      while (i < 10) {
+        i += 2;
+        console.log(i);
+      }
+        
+
+      let i = 10;
+      while (i > 0) {
+        i--;
+        console.log(i);
+      }
+
+      
+
+      function addArray(array, num) {
+        let newArray = [];
+        for (let i = 0; i < array.length; i++) {
+          newArray.push(array[i] + num);
+        }
+        return newArray;
+      }
+
+      console.log(addArray([1, 2, 3], 2));
+      console.log(addArray([-2, -1, 0, 99], 2));
+      console.log(addArray([1, 2, 3], 3));
+
+      let mainTotal = [];
+
+      function add2(array1, array2) {
+        mainTotal = array1 + array2;
+        return mainTotal;
+      }
+
+      console.log(add2([2, 3, 4], [3, 4, 5]));
+
+      */
+
+      const array = [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+      ];
+
+      for (let i = 1; i <= array.length; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+          console.log("FizzBuzz");
+        } else if (i % 3 === 0) {
+          console.log("Fizz");
+        } else if (i % 5 === 0) {
+          console.log("Buzz");
+        } else {
+          console.log(i);
+        }
+      }
+
+      function classifyNum(num) {
+        if (num > 0) {
+          return "Positive";
+        } else if (num === 0) {
+          return "zero";
+        } else if (num < 0) {
+          return "negative";
+        }
+      }
+
+      console.log(classifyNum(1));
+      console.log(classifyNum(0));
+      console.log(classifyNum(-1));
+    </script>
+  </body>
+</html>
